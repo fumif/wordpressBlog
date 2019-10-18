@@ -1,0 +1,221 @@
+
+// Headlines
+
+.h2,
+.h3 {
+    width: 100%;
+    @include font($font-sansserif);
+
+    &:lang(en) {
+        text-transform: uppercase;
+    }
+}
+
+.h2 {
+    display: block;
+    margin: 2rem 0 !important;
+    padding: 1rem !important;
+    color: #fff;
+    box-shadow: shadow(1);
+
+    &-red {
+        background-color: $primary-colour;
+    }
+
+    // &-green {
+    //     background-color: $accent-colour;
+
+    // }
+}
+
+.h3 {
+    display: block;
+    margin: 2rem 0 !important;
+
+    &-dark {
+        &-left {
+            padding-left: 1rem;
+            border-left: px-to-rem(7) solid $secondary-dark;
+        }
+
+        &-underline {
+            border-bottom: px-to-rem(7) solid $secondary-dark;
+        }
+    }
+
+    &-red {
+        &-left {
+            padding-left: 1rem;
+            border-left: px-to-rem(7) solid $primary-colour;
+        }
+
+        &-underline {
+            border-bottom: px-to-rem(7) solid $primary-colour;
+        }
+    }
+
+    // &-green {
+    //     &-left {
+    //      padding-left: 1rem;
+    //      border-left: px-to-rem(7) solid $accent-colour;
+    //     }
+    //     &-underline {
+    //      border-bottom: px-to-rem(7) solid $accent-colour;
+    //     }
+    // }
+}
+
+
+// Black Quoets
+.bq {
+    position: relative;
+    margin-left: px-to-rem(30);
+    padding: px-to-rem(30) px-to-rem(60);
+    border-left: 5px solid $secondary-dark;
+    min-height: px-to-rem(140);
+    background-color: $secondary-light;
+
+    p {
+        @include font($font-sansserif, true);
+        font-style: italic !important;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        font-family: "FontAwesome";
+        font-size: 3rem;
+        margin: 0;
+        color: rgba($secondary-med, .3) !important;
+    }
+
+    &::before {
+        top: .5rem;
+        left: 1rem;
+        content: "\f10d";
+    }
+
+    &::after {
+        right: 1rem;
+        bottom: 0;
+        content: "\f10e";
+    }
+
+    span.bq-source {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding-right: px-to-rem(60);
+        padding-bottom: 1rem;
+        font-style: normal;
+    }
+}
+
+
+// font 
+
+.f-small {
+    font-size: px-to-rem(14);
+}
+
+.f-135 {
+    font-size: 1.35rem;
+}
+
+.photo-credit {
+    text-align: center;
+    margin-bottom: 1rem;
+    @include font-weight(reg);
+    @include font($font-sansserif, null);
+}
+
+// hr tag
+hr {
+    &.bdr {
+        display: block;
+        margin: 2rem 0;
+        border: none;
+        border-bottom: 1px solid $secondary-med;
+    }
+
+    &.dotted {
+        display: block;
+        margin: 2rem 0;
+        border: none;
+        border-bottom: 3px dotted $secondary-med;
+    }
+}
+
+
+.paper {
+    background-color: $bg-colour;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    @include font-weight(reg);
+    @include font($font-sansserif, 1rem);
+
+    @at-root &,
+    &::before,
+    &::after {
+        box-shadow: shadow(1);
+        border: 1px solid $border-colour;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 95%;
+        width: 99%;
+        background-color: $secondary-light;
+    }
+
+
+    &::before {
+        right: 15px;
+        top: 0;
+        transform: rotate(-1deg);
+        z-index: -1;
+    }
+
+    &::after {
+        top: 5px;
+        right: -5px;
+        transform: rotate(1deg);
+        z-index: -2;
+    }
+}
+
+
+.sans {
+    font-family: $font-sansserif;
+}
+
+.serif {
+    font-family: $font-serif;
+}
+
+// marker 
+
+$markers: (
+    "red": #ffaaaa,
+    "pink": #ff99cc,
+    "purple": #cc99ff,
+    "blue": #99ccff,
+    "skyblue": #99ffff,
+    "blue-green": #66ffcc,
+    "green": #99ff99,
+    "yellow-green": #ccff33,
+    "yellow": #ffff66,
+    "orange": #ffcc99
+);
+
+@each $marker, $value in $markers {
+    .marker-#{$marker} {
+        background:linear-gradient(transparent 35%, $value 0%);
+        padding: 0 .25rem;
+    }
+}
+
+

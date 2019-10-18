@@ -1,0 +1,34 @@
+// Colours
+@import "functions";
+
+// $primary-colour : darken(#F99E94,5);
+$primary-colour : #fa7268;
+$secondary-dark : #272B2E;
+$secondary-med  : lighten($secondary-dark, 40);
+$secondary-light: #F2F2F4;
+$bg-colour      : #fff;
+$accent-colour  : mix(#6cdbb6, #00d2ff);
+$border-colour  : darken($secondary-light, 15);
+$category-bg    : rgba($secondary-dark, .45);
+$primary-dark   : darken($primary-colour, 15);
+
+
+$font-sansserif: 'Roboto', 'Noto Sans JP', sans-serif;
+$font-serif: 'PT Serif', 'Noto Serif JP', serif;
+
+//brand-colour
+	$brand-colour: ( 
+		facebook: #3B5998,
+		twitter : #1DA1F2,
+		rss     : #f26522,
+		email   : $primary-colour,
+);
+
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.35; // desktop

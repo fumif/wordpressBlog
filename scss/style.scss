@@ -1,0 +1,25 @@
+/*
+Theme Name: Kumonosu_Blog
+Theme URI: http://localhost:8888/wordpress/blog/
+Author: Fumi Fujita
+Author URI: http://www.fumifujita.com/
+Description: This is a theme for blogs that correspond to 100% responsive design. Clean and simple, easy to find articles with the overlayed large search bar. This supports one column, two columns layout, custom logo, and large sticky posts that emphasize your featured articles.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kumonosu_blog
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+*/
+
+@import "partials/variables";
+@import "partials/functions";
+@import "partials/mixins";
+@import "partials/loops";
+@import "partials/base";
+@import "partials/media-query";
+@import "partials/menu";
+@import "partials/quicktag";
+@import "partials/wordpress-core";
+@import "partials/wordpress-comments";
+@import "partials/admin-dashboard";

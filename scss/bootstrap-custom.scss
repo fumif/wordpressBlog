@@ -1,0 +1,31 @@
+@import "partials/variables";
+$theme-colors: (
+		"primary": $primary-colour,
+		"light"  : $bg-colour,
+		"dark"   : $secondary-dark,
+		);
+
+$border-radius-lg: 0;
+$yiq-contrasted-threshold:  190;
+$badge-border-radius: 0;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "partials/functions";
+@import "partials/mixins";
+@import "partials/media-query";
+
+.btn {
+    @at-root #load-more-contents#{&} {
+    		margin-top: px-to-rem(60);
+            width: 50%;
+        }
+}
+
+.page-link {
+    border: 0!important;
+}
+
+
+

@@ -1,0 +1,124 @@
+/* Comment Form */
+
+input#author,
+textarea#comment {
+    width: 100%;
+    border: 1px solid $secondary-light;
+    padding: .75rem 1rem;
+    background-color: $secondary-light;
+}
+
+input#submit.submit {
+    padding: .5rem;
+    background-color: $primary-colour;
+    color: #fff;
+    font-size: px-to-rem(14);
+    text-transform: uppercase;
+    box-shadow: shadow(1);
+    transition: all .5s;
+    @include font-weight(semi-bold);
+
+    &:hover {
+        cursor: pointer;
+        background: $primary-dark;
+        box-shadow: shadow(2);
+    }
+
+}
+
+
+/*Comment Output*/
+
+
+
+
+.comment {
+    &-lists-wrap {
+        ol {
+            padding: 0;
+            list-style-position: inside;
+            list-style-type: none !important;
+
+            li {
+                overflow: hidden;
+
+                &.depth-2 {
+                    display: block;
+                    margin-bottom: 2rem;
+                    background-color: $secondary-light;
+                }
+            }
+        }
+    }
+
+    .children li {
+        list-style-type: none;
+    }
+
+    &-body {
+        clear: both;
+        padding: 1rem .5rem;
+        min-height: px-to-rem(200);
+
+        p {
+            display: block;
+            padding-left: 1rem;
+            overflow: hidden;
+            border-left: 1px solid $border-colour;
+
+            // margin: 0 0 2% 0 !important;
+        }
+    }
+
+
+    &-main {
+        padding: 0 1rem;
+    }
+
+
+    &-top {
+        height: px-to-rem(60);
+        flex-shrink: 0;
+    }
+
+    &-author {
+        display: block;
+        width: px-to-rem(60);
+        height: px-to-rem(60);
+
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-date {
+        font-size: px-to-rem(14);
+    }
+
+}
+
+
+span.says {
+    display: none;
+}
+
+.fn {
+    display: block;
+    font-style: normal;
+    clear: both;
+    text-align: center;
+    @include font-weight(semi-bold);
+}
+
+.byuser {
+    background-color: #fff;
+}
+
+/*Akismet Comment Form Notice*/
+
+.akismet_comment_form_privacy_notice {
+    font-size: px-to-rem(14);
+    text-align: right;
+}

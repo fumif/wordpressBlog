@@ -1,0 +1,25 @@
+.post-category-menu:not(#responsive-menu) {
+    position: relative;
+    height: 15vh;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    align-items: center;
+  .submenu {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    height: 15vh;
+    position: absolute;
+    z-index: 3;
+    background-color: $secondary-light;
+    box-shadow: shadow(1);
+    a {
+      color: #fff;
+    }
+  }
+}

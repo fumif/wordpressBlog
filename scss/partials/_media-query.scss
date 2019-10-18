@@ -1,0 +1,57 @@
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+@include media-breakpoint-up(lg) {
+    .lang {
+        margin-right: px-to-rem(60);
+    }
+
+
+    main {
+        padding-top: px-to-rem(60);
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+
+    .custom-logo {
+        width: auto !important;
+        height: 10vh !important;
+    }
+
+    .ad {
+       margin: 1rem auto;
+    }
+
+    .cover {
+        margin-top: 10vh;
+
+        &-firstpost,
+        &-image {
+            height: 65vh !important;
+        }
+    }
+
+
+
+    .copyright {
+        margin: 1rem 0;
+    }
+
+    .search {
+        form {
+            input {
+                font-size: 6.5vw !important;
+                ;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+/* Scroll Top Button */
+    .scrollTop {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}

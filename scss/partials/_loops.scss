@@ -1,0 +1,33 @@
+@each $brand,
+$brand-hex in $brand-colour {
+    a {
+        .hex-#{$brand} {
+            color: $brand-hex !important;
+        }
+    }
+
+}
+
+
+$qty: 90;
+
+@for $i from 1 through $qty {
+
+    $c: adjust-hue($accent-colour, $qty * $i * 1);
+
+    .cat-#{$i+1} {
+        color: $c !important;
+        @include font-weight(bold);
+
+        .cover & {
+            background-color: $c !important;
+            color: #fff !important;
+        }
+
+        // .submenu & {
+        // 	background-color: $c!important;
+        // 	color: #fff!important;
+        // 	padding: .25rem .5rem;
+        // }
+    }
+}
